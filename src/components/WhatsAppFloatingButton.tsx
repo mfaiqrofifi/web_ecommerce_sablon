@@ -4,7 +4,7 @@ import { createWhatsAppLink } from "@/lib/whatsapp";
 export function WhatsAppFloatingButton() {
   return (
     <a
-      href={createWhatsAppLink("Halo Lancar Clothing Sablon, saya mau konsultasi sablon atau bordir custom.")}
+      href={createWhatsAppLink("Halo Lancar Konveksi Bordir & Sablon, saya mau konsultasi sablon atau bordir custom.")}
       target="_blank"
       rel="noreferrer"
       aria-label="Order via WhatsApp"

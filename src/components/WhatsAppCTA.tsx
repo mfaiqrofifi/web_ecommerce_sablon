@@ -14,7 +14,7 @@ type WhatsAppCTAProps = {
 export function WhatsAppCTA({
   title = "Siap konsultasi produksi custom clothing?",
   description = "Kirim kebutuhan produk, jumlah, bahan, desain, dan deadline. Tim kami bantu rekomendasikan opsi produksi yang paling sesuai.",
-  message = "Halo Lancar Clothing Sablon, saya mau konsultasi order custom clothing.",
+  message = "Halo Lancar Konveksi Bordir & Sablon, saya mau konsultasi order custom clothing.",
   icon: Icon = PhoneCall,
 }: WhatsAppCTAProps) {
   return (

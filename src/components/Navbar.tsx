@@ -42,7 +42,7 @@ export function Navbar() {
         </div>
 
         <a
-          href={createWhatsAppLink("Halo Lancar Clothing Sablon, saya mau konsultasi sablon atau bordir custom.")}
+          href={createWhatsAppLink("Halo Lancar Konveksi Bordir & Sablon, saya mau konsultasi sablon atau bordir custom.")}
           target="_blank"
           rel="noreferrer"
           className="focus-ring hidden items-center gap-2 rounded-full bg-[#20251b] px-5 py-3 text-sm font-black text-white shadow-lg shadow-zinc-900/10 transition hover:bg-[#64734a] lg:inline-flex"

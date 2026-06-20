@@ -109,7 +109,7 @@ export default function ProdukDetailPage({ params }: PageProps) {
       <FAQSection items={globalFaqs.slice(0, 3)} title={`FAQ ${product.name}`} />
       <WhatsAppCTA
         title={`Order ${product.name} via WhatsApp`}
-        message={`Halo Lancar Clothing Sablon, saya mau order ${product.name}. Bisa info detail harga dan bahan?`}
+        message={`Halo Lancar Konveksi Bordir & Sablon, saya mau order ${product.name}. Bisa info detail harga dan bahan?`}
       />
     </>
   );

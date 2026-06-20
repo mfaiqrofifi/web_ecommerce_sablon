@@ -21,7 +21,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
   if (!service) return {};
 
   return createPageMetadata({
-    title: service.metaTitle.replace(" | Lancar Clothing Sablon", ""),
+    title: service.metaTitle.replace(" | Lancar Konveksi", ""),
     description: service.metaDescription,
     path: `/layanan/${service.slug}`,
     keywords: service.keywords,
@@ -102,7 +102,7 @@ export default function LayananDetailPage({ params }: PageProps) {
       <FAQSection items={service.faqs} title={`FAQ ${service.title}`} />
       <WhatsAppCTA
         title={`Konsultasi ${service.title}`}
-        message={`Halo Lancar Clothing Sablon, saya mau konsultasi ${service.title}. Bisa dibantu?`}
+        message={`Halo Lancar Konveksi Bordir & Sablon, saya mau konsultasi ${service.title}. Bisa dibantu?`}
       />
     </>
   );

@@ -6,11 +6,11 @@ import { products } from "@/data/site";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Produk Custom Clothing | Kaos, Hoodie, Jersey, Seragam",
+  title: "Produk Konveksi Kertosono | Kaos, Hoodie, Jersey, Seragam",
   description:
-    "Katalog produk Lancar Clothing Sablon untuk kaos sablon custom, hoodie custom, jersey custom, seragam komunitas, dan merchandise perusahaan.",
+    "Katalog produk Lancar Konveksi untuk kaos custom Kertosono, hoodie custom, jersey, seragam komunitas, dan merchandise perusahaan di Nganjuk.",
   path: "/produk",
-  keywords: ["kaos custom satuan", "konveksi kaos", "sablon hoodie", "jersey custom"],
+  keywords: ["kaos custom kertosono", "kaos custom nganjuk", "hoodie custom kertosono", "buat jersey nganjuk", "pesan kaos satuan kertosono"],
 });
 
 export default function ProdukPage() {
@@ -21,10 +21,11 @@ export default function ProdukPage() {
         <div className="container-shell">
           <p className="eyebrow text-[#c8d7ad]">Produk</p>
           <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-            Produk custom clothing untuk sablon dan konveksi
+            Produk konveksi, sablon, dan bordir custom
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
-            Pilih produk, lihat detail bahan dan minimum order, lalu lanjut konsultasi via WhatsApp.
+            Pilih produk untuk kebutuhan Kertosono dan Nganjuk, lihat detail bahan dan minimum order,
+            lalu lanjut konsultasi via WhatsApp.
           </p>
         </div>
       </section>

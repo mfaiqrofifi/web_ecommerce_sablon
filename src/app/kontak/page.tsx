@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Camera, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { Camera, Clock, MapPinned, MapPin, MessageCircle, Send } from "lucide-react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
 import { products, siteConfig } from "@/data/site";
@@ -7,11 +7,11 @@ import { createPageMetadata } from "@/lib/seo";
 import { createProductOrderLink, createWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Kontak Lancar Clothing Sablon",
+  title: "Kontak Konveksi Kertosono | Lancar Konveksi",
   description:
-    "Hubungi Lancar Clothing Sablon untuk jasa sablon kaos, konveksi kaos, jersey custom, hoodie custom, seragam, dan merchandise perusahaan.",
+    "Hubungi Lancar Konveksi Bordir & Sablon di Kertosono, Nganjuk untuk jasa sablon kaos, bordir, konveksi kaos, jersey, hoodie, dan seragam.",
   path: "/kontak",
-  keywords: ["kontak sablon kaos", "order kaos custom", "Lancar Clothing Sablon"],
+  keywords: ["konveksi kertosono", "jasa sablon nganjuk", "tempat sablon terdekat", "Lancar Konveksi"],
 });
 
 export default function KontakPage() {
@@ -22,11 +22,11 @@ export default function KontakPage() {
         <div className="container-shell">
           <p className="eyebrow text-[#c8d7ad]">Kontak / Order</p>
           <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-            Order jasa sablon kaos via WhatsApp
+            Order konveksi dan sablon via WhatsApp
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
-            Kirim kebutuhan produk, jumlah, bahan, desain, dan deadline. Kami bantu rekomendasikan
-            teknik sablon atau konveksi yang paling tepat.
+            Datang ke workshop Kertosono atau kirim kebutuhan produk, jumlah, bahan, desain,
+            dan deadline via WhatsApp. Kami bantu rekomendasikan teknik sablon, bordir, atau konveksi.
           </p>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function KontakPage() {
             <h2 className="text-2xl font-black text-zinc-950">Info kontak</h2>
             <div className="mt-6 grid gap-4">
               <a
-                href={createWhatsAppLink("Halo Lancar Clothing Sablon, saya mau konsultasi order custom clothing.")}
+                href={createWhatsAppLink("Halo Lancar Konveksi Bordir & Sablon, saya mau konsultasi order custom clothing.")}
                 target="_blank"
                 rel="noreferrer"
                 className="focus-ring flex items-center gap-3 rounded-2xl bg-white p-4 font-bold text-zinc-700 shadow-sm hover:text-[#64734a]"
@@ -54,13 +54,27 @@ export default function KontakPage() {
                 <Camera className="h-5 w-5" aria-hidden />
                 {siteConfig.instagram}
               </a>
-              <span className="flex items-center gap-3 rounded-2xl bg-white p-4 font-bold text-zinc-700 shadow-sm">
+              <a
+                href={siteConfig.googleMapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="focus-ring flex items-center gap-3 rounded-2xl bg-white p-4 font-bold text-zinc-700 shadow-sm hover:text-[#64734a]"
+              >
                 <MapPin className="h-5 w-5" aria-hidden />
                 {siteConfig.address.display}
-              </span>
+              </a>
+              <a
+                href={siteConfig.googleMapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="focus-ring flex items-center gap-3 rounded-2xl bg-white p-4 font-bold text-zinc-700 shadow-sm hover:text-[#64734a]"
+              >
+                <MapPinned className="h-5 w-5" aria-hidden />
+                Buka Google Maps
+              </a>
               <span className="flex items-center gap-3 rounded-2xl bg-white p-4 font-bold text-zinc-700 shadow-sm">
-                <Mail className="h-5 w-5" aria-hidden />
-                {siteConfig.email}
+                <Clock className="h-5 w-5" aria-hidden />
+                {siteConfig.hours}
               </span>
             </div>
           </aside>
@@ -87,6 +101,17 @@ export default function KontakPage() {
                 </a>
               ))}
             </div>
+          </div>
+        </div>
+        <div className="container-shell mt-8">
+          <div className="overflow-hidden rounded-[2rem] border border-zinc-200 bg-zinc-50">
+            <iframe
+              title="Google Maps Lancar Konveksi Bordir dan Sablon"
+              src="https://www.google.com/maps?q=Lancar%20Konveksi%20Bordir%20Komputer%20dan%20Sablon%20Jalan%20Raya%20Juwono%20No.3%20Kertosono&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-[22rem] w-full border-0"
+            />
           </div>
         </div>
       </section>

@@ -15,13 +15,13 @@ export function HeroSection() {
     <section className="overflow-hidden bg-[#cfd8bb]">
       <div className="container-shell grid min-h-[calc(100vh-4rem)] gap-8 py-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:py-12">
         <div className="relative">
-          <p className="text-xs font-black uppercase tracking-[0.24em] text-[#4f5d38]">Lancar Clothing Sablon</p>
+          <p className="text-xs font-black uppercase tracking-[0.24em] text-[#4f5d38]">Lancar Konveksi Bordir & Sablon</p>
           <h1 className="mt-5 max-w-xl text-5xl font-black leading-[0.94] tracking-tight text-[#11140f] sm:text-6xl lg:text-7xl">
-            Custom wear yang rapi, siap dipakai, siap dibagikan.
+            Konveksi Kertosono untuk kaos, seragam, hoodie, dan jersey.
           </h1>
           <p className="mt-6 max-w-lg text-base leading-8 text-[#3f4638]">
-            Produksi sablon dan bordir untuk kaos, hoodie, jersey, seragam, dan merchandise.
-            Mulai dari satuan sampai partai.
+            Jasa sablon dan bordir di Kertosono, Nganjuk. Produksi bisa untuk satuan,
+            komunitas, sekolah, perusahaan, sampai partai.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -33,7 +33,7 @@ export function HeroSection() {
               <ArrowRight size={18} aria-hidden />
             </Link>
             <a
-              href={createWhatsAppLink("Halo Lancar Clothing Sablon, saya mau konsultasi sablon atau bordir custom.")}
+              href={createWhatsAppLink("Halo Lancar Konveksi Bordir & Sablon, saya mau konsultasi sablon atau bordir custom.")}
               target="_blank"
               rel="noreferrer"
               className="focus-ring inline-flex items-center justify-center gap-2 rounded-full border border-[#11140f]/20 bg-[#f7f3e8]/80 px-6 py-4 text-sm font-black text-[#11140f] backdrop-blur transition hover:bg-white"
@@ -44,7 +44,7 @@ export function HeroSection() {
           </div>
 
           <div className="mt-10 hidden max-w-md border-t border-[#11140f]/20 pt-6 text-sm font-semibold leading-7 text-[#4f5d38] sm:block">
-            Sablon manual, DTF, plastisol, bordir logo, seragam komunitas, dan merchandise perusahaan.
+            Tempat bikin kaos Kertosono, sablon DTF, plastisol, bordir logo, seragam komunitas, dan merchandise perusahaan.
           </div>
         </div>
 
@@ -87,7 +87,7 @@ export function HeroSection() {
             <div className="grid gap-3">
               {[
                 { title: "Bordir logo", image: "/images/portfolio-seragam-cafe.webp", href: "/layanan/konveksi-seragam" },
-                { title: "Hoodie brand", image: "/images/produk-hoodie-custom.webp", href: "/produk/hoodie-custom" },
+                { title: "Hoodie brand", image: "/images/produk-hoodie-varsity.webp", href: "/produk/hoodie-custom" },
               ].map((item) => (
                 <Link key={item.title} href={item.href} className="group relative min-h-[12rem] overflow-hidden rounded-[1.5rem] bg-[#e9dfca]">
                   <OptimizedImage src={item.image} alt={item.title} className="absolute inset-0 h-full" />
@@ -109,10 +109,10 @@ export function HeroSection() {
                 <ArrowRight size={15} aria-hidden />
               </Link>
             </div>
-            <Link href="/portfolio/jersey-futsal-sekolah" className="group relative min-h-[13rem] overflow-hidden rounded-[1.5rem] bg-[#d8e1c6]">
-              <OptimizedImage src="/images/portfolio-jersey-futsal-sekolah.webp" alt="Jersey custom" className="absolute inset-0 h-full" />
+            <Link href="/portfolio/kaos-sablon-event" className="group relative min-h-[13rem] overflow-hidden rounded-[1.5rem] bg-[#d8e1c6]">
+              <OptimizedImage src="/images/portfolio-jersey-futsal-sekolah.webp" alt="Kaos sablon event" className="absolute inset-0 h-full" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#11140f]/62 via-transparent to-transparent" />
-              <h2 className="absolute bottom-4 left-4 text-3xl font-black leading-none text-white">Jersey team</h2>
+              <h2 className="absolute bottom-4 left-4 text-3xl font-black leading-none text-white">Sablon event</h2>
             </Link>
           </div>
         </div>

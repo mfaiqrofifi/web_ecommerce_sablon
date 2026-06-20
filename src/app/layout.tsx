@@ -25,11 +25,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
   title: {
-    default: "Jasa Sablon & Bordir Custom | Lancar Clothing Sablon",
-    template: "%s | Lancar Clothing Sablon",
+    default: "Konveksi Kertosono & Jasa Sablon Nganjuk | Lancar Konveksi",
+    template: "%s | Lancar Konveksi",
   },
   description:
-    "Lancar Clothing Sablon melayani sablon dan bordir custom untuk kaos, hoodie, jersey, seragam, dan merchandise perusahaan.",
+    "Lancar Konveksi Bordir & Sablon melayani konveksi Kertosono, jasa sablon Nganjuk, kaos custom, hoodie, jersey, seragam, dan merchandise.",
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,

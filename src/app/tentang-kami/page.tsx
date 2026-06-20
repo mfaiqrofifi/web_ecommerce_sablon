@@ -8,9 +8,9 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Tentang Kami",
   description:
-    "Tentang Lancar Clothing Sablon, penyedia custom clothing dan sablon dan bordir untuk Indonesia.",
+    "Tentang Lancar Konveksi Bordir & Sablon, penyedia konveksi Kertosono, jasa sablon Nganjuk, bordir komputer, kaos custom, dan seragam.",
   path: "/tentang-kami",
-  keywords: ["Lancar Clothing Sablon", "jasa sablon kaos", "custom clothing"],
+  keywords: ["Lancar Konveksi", "konveksi kertosono", "jasa sablon nganjuk", "bordir komputer"],
 });
 
 export default function TentangKamiPage() {
@@ -18,15 +18,34 @@ export default function TentangKamiPage() {
     <>
       <Breadcrumb items={[{ name: "Tentang Kami", href: "/tentang-kami" }]} />
       <section className="bg-[#20251b] py-16 text-white sm:py-20">
-        <div className="container-shell">
-          <p className="eyebrow text-[#c8d7ad]">Tentang kami</p>
-          <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-            Lancar Clothing Sablon untuk custom clothing
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
-            Kami membantu komunitas, sekolah, perusahaan, dan brand lokal memproduksi kaos custom,
-            hoodie, jersey, seragam, dan merchandise dengan proses yang jelas.
-          </p>
+        <div className="container-shell grid gap-8 lg:grid-cols-[0.95fr_0.75fr] lg:items-center">
+          <div>
+            <p className="eyebrow text-[#c8d7ad]">Tentang kami</p>
+            <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
+              Lancar Konveksi untuk custom clothing Kertosono
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
+              Kami membantu komunitas, sekolah, perusahaan, dan brand lokal memproduksi kaos custom,
+              hoodie, jersey, seragam, dan merchandise dengan proses yang jelas dari workshop Kertosono, Nganjuk.
+            </p>
+          </div>
+          <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-[2rem] border border-white/10 bg-black shadow-2xl shadow-black/30">
+            <video
+              className="aspect-[9/16] h-full w-full object-cover"
+              src="/videos/workshop-bordir-short.mp4"
+              poster="/videos/workshop-bordir-short-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Video proses bordir komputer Lancar Konveksi"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#c8d7ad]">Workshop reel</p>
+              <p className="mt-1 text-lg font-black">Proses bordir komputer</p>
+            </div>
+          </div>
         </div>
       </section>
 

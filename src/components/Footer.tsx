@@ -18,8 +18,8 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-5 max-w-md text-sm leading-6 text-zinc-300">
-            Jasa sablon dan bordir untuk kaos custom, hoodie, jersey, seragam,
-            dan merchandise perusahaan.
+            Konveksi Kertosono dan jasa sablon Nganjuk untuk kaos custom, hoodie,
+            jersey, seragam, bordir komputer, dan merchandise perusahaan.
           </p>
         </div>
 
@@ -37,7 +37,12 @@ export function Footer() {
         <div>
           <p className="text-sm font-black uppercase tracking-[0.16em] text-zinc-400">Contact</p>
           <div className="mt-4 grid gap-3 text-sm text-zinc-300">
-            <a className="flex items-center gap-2 hover:text-white" href={createWhatsAppLink("Halo Lancar Clothing Sablon, saya mau bertanya tentang order.")} target="_blank" rel="noreferrer">
+            <a
+              className="flex items-center gap-2 hover:text-white"
+              href={createWhatsAppLink("Halo Lancar Konveksi Bordir & Sablon, saya mau bertanya tentang order.")}
+              target="_blank"
+              rel="noreferrer"
+            >
               <MessageCircle size={17} />
               {siteConfig.phone}
             </a>
@@ -45,22 +50,19 @@ export function Footer() {
               <Camera size={17} />
               {siteConfig.instagram}
             </a>
-            <span className="flex items-start gap-2">
+            <a className="flex items-start gap-2 hover:text-white" href={siteConfig.googleMapsUrl} target="_blank" rel="noreferrer">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
               {siteConfig.address.display}
-            </span>
+            </a>
           </div>
         </div>
       </div>
       <div className="border-t border-white/10 py-5">
         <div className="container-shell flex flex-col gap-2 text-xs font-semibold text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 Lancar Clothing Sablon. All rights reserved.</span>
+          <span>Copyright 2026 {siteConfig.name}. All rights reserved.</span>
           <span>Siap menerima order custom via WhatsApp.</span>
         </div>
       </div>
     </footer>
   );
 }
-
-
-

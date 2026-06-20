@@ -8,11 +8,11 @@ import { globalFaqs, services } from "@/data/site";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Layanan Sablon, Bordir, dan Konveksi",
+  title: "Jasa Sablon Kertosono & Konveksi Nganjuk",
   description:
-    "Layanan Lancar Clothing Sablon: sablon kaos, bordir custom, konveksi kaos, sablon hoodie, jersey custom, seragam, dan merchandise perusahaan.",
+    "Layanan Lancar Konveksi: jasa sablon Kertosono, konveksi Nganjuk, bordir komputer, sablon hoodie, jersey custom, seragam, dan merchandise.",
   path: "/layanan",
-  keywords: ["jasa sablon kaos", "konveksi kaos", "konveksi seragam", "vendor merchandise"],
+  keywords: ["jasa sablon kertosono", "jasa sablon nganjuk", "konveksi kertosono", "konveksi nganjuk", "sablon dtf kertosono"],
 });
 
 export default function LayananPage() {
@@ -23,10 +23,11 @@ export default function LayananPage() {
         <div className="container-shell">
           <p className="eyebrow text-[#c8d7ad]">Layanan</p>
           <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-            Layanan sablon, bordir, dan konveksi custom
+            Jasa sablon, bordir, dan konveksi Kertosono
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
-            Pilih kebutuhan produksi, lalu konsultasikan desain, bahan, jumlah, dan deadline via WhatsApp.
+            Pilih kebutuhan produksi untuk kaos, hoodie, jersey, seragam kerja, atau merchandise,
+            lalu konsultasikan desain, bahan, jumlah, dan deadline via WhatsApp.
           </p>
         </div>
       </section>

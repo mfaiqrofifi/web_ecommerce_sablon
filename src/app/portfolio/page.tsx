@@ -7,11 +7,11 @@ import { portfolioItems } from "@/data/site";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Portfolio Sablon dan Konveksi",
+  title: "Portfolio Sablon dan Konveksi Kertosono",
   description:
-    "Portfolio Lancar Clothing Sablon: jersey futsal, seragam cafe, hoodie brand lokal, dan project custom clothing.",
+    "Portfolio Lancar Konveksi Bordir & Sablon: kaos sablon event, seragam bordir, dan proses produksi bordir komputer di Kertosono Nganjuk.",
   path: "/portfolio",
-  keywords: ["portfolio sablon kaos", "jersey custom", "konveksi seragam"],
+  keywords: ["portfolio sablon kaos", "konveksi kertosono", "jasa sablon nganjuk", "bordir komputer"],
 });
 
 export default function PortfolioPage() {
@@ -22,10 +22,10 @@ export default function PortfolioPage() {
         <div className="container-shell">
           <p className="eyebrow text-[#c8d7ad]">Portfolio</p>
           <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-            Portfolio sablon dan konveksi
+            Portfolio sablon, bordir, dan konveksi
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
-            Beberapa contoh project custom sebagai referensi sebelum order.
+            Contoh hasil produksi kaos sablon, seragam bordir, dan project custom sebagai referensi sebelum order.
           </p>
         </div>
       </section>

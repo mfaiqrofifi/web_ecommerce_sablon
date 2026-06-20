@@ -81,12 +81,14 @@ export function localBusinessSchema() {
     image: absoluteUrl("/images/og-lancar-clothing-sablon.webp"),
     url: siteConfig.baseUrl,
     telephone: siteConfig.phone,
+    hasMap: siteConfig.googleMapsUrl,
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.street,
       addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.region,
+      postalCode: siteConfig.address.postalCode,
       addressCountry: siteConfig.address.country,
     },
     geo: {
@@ -102,9 +104,32 @@ export function localBusinessSchema() {
         closes: "17:00",
       },
     ],
-    sameAs: [siteConfig.instagramUrl],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: siteConfig.googleRating.value,
+      reviewCount: siteConfig.googleRating.count,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Icha Icha" },
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+        reviewBody: "Pesan 1000 pcs kaos. Hasil bagus, sudah beberapa kali pesan hasil top.",
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Dimas Ilham Akbar Firdaus" },
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+        reviewBody: "Pengerjaan bagus, pelayanan juga ramah, hasilnya bagus, sangat rekomendasi.",
+      },
+    ],
+    sameAs: [siteConfig.instagramUrl, siteConfig.googleMapsUrl],
     areaServed: [
-      { "@type": "Country", name: "Indonesia" },
+      { "@type": "City", name: "Kertosono" },
+      { "@type": "AdministrativeArea", name: "Nganjuk" },
+      { "@type": "AdministrativeArea", name: "Jawa Timur" },
     ],
   };
 }
@@ -125,7 +150,7 @@ export function organizationSchema() {
       areaServed: "ID",
       availableLanguage: ["Indonesian"],
     },
-    sameAs: [siteConfig.instagramUrl],
+    sameAs: [siteConfig.instagramUrl, siteConfig.googleMapsUrl],
   };
 }
 

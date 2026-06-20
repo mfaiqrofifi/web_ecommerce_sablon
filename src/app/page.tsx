@@ -1,41 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, MessageCircle, PackageCheck } from "lucide-react";
-import { FAQSection } from "@/components/FAQSection";
 import { HeroSection } from "@/components/HeroSection";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
-import { globalFaqs } from "@/data/site";
+import { targetKeywords } from "@/data/site";
 import { createPageMetadata } from "@/lib/seo";
 import { createWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Jasa Sablon & Bordir Kaos Custom | Lancar Clothing Sablon",
+  title: "Konveksi Kertosono & Jasa Sablon Nganjuk | Lancar Konveksi",
   description:
-    "Lancar Clothing Sablon melayani sablon kaos, bordir custom, konveksi kaos, hoodie, jersey, seragam, dan merchandise perusahaan.",
+    "Lancar Konveksi Bordir & Sablon melayani konveksi Kertosono, jasa sablon Nganjuk, kaos custom, hoodie custom, jersey, seragam, dan merchandise.",
   path: "/",
-  keywords: [
-    "jasa sablon dan bordir",
-    "konveksi kaos",
-    "bordir kaos custom",
-    "sablon hoodie",
-    "jersey custom",
-    "konveksi seragam",
-  ],
+  keywords: targetKeywords,
   image: "/images/og-jasa-sablon-kaos.webp",
 });
 
-const categories = [
-  { title: "Kaos Custom", href: "/produk/kaos-sablon-custom", image: "/images/produk-kaos-sablon-custom.webp" },
-  { title: "Bordir Seragam", href: "/layanan/konveksi-seragam", image: "/images/portfolio-seragam-cafe.webp" },
-  { title: "Hoodie", href: "/produk/hoodie-custom", image: "/images/produk-hoodie-custom.webp" },
-  { title: "Jersey", href: "/produk/jersey-custom", image: "/images/produk-jersey-custom.webp" },
-];
-
 const proof = [
+  ["Konveksi", "Kaos, seragam, hoodie"],
   ["Sablon", "Rubber, DTF, plastisol"],
-  ["Bordir", "Logo, nama, emblem"],
-  ["Konveksi", "Satuan sampai partai"],
+  ["Bordir Komputer", "Logo, nama, emblem"],
 ];
 
 export default function HomePage() {
@@ -43,7 +28,7 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      <section className="bg-[#fbfaf4] py-10">
+      <section className="bg-[#fbfaf4] py-8">
         <div className="container-shell grid gap-3 sm:grid-cols-3">
           {proof.map(([title, text]) => (
             <div key={title} className="rounded-[1.5rem] border border-[#d9ddcc] bg-[#f7f3e8] p-5">
@@ -51,38 +36,6 @@ export default function HomePage() {
               <p className="mt-1 text-sm font-semibold text-[#586149]">{text}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container-shell">
-          <div className="max-w-2xl">
-            <p className="eyebrow">Pilih kebutuhan</p>
-            <h2 className="mt-3 text-4xl font-black leading-[0.98] tracking-tight text-[#11140f] sm:text-6xl">
-              Langsung ke produk yang mau kamu buat.
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-4">
-            {categories.map((item, index) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className={`group relative overflow-hidden rounded-[1.75rem] bg-[#d8e1c6] ${
-                  index === 0 ? "md:col-span-2 md:min-h-[26rem]" : "min-h-[18rem]"
-                }`}
-              >
-                <OptimizedImage src={item.image} alt={item.title} className="absolute inset-0 h-full" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#11140f]/70 via-[#11140f]/5 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
-                  <h3 className="max-w-[12rem] text-3xl font-black leading-none text-white">{item.title}</h3>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#11140f] transition group-hover:translate-x-1">
-                    <ArrowRight size={17} aria-hidden />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -105,21 +58,21 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Link href="/portfolio/seragam-cafe" className="group relative min-h-[23rem] overflow-hidden rounded-[1.75rem] bg-[#d8e1c6]">
-              <OptimizedImage src="/images/portfolio-seragam-cafe.webp" alt="Portfolio seragam cafe" className="absolute inset-0 h-full" />
+            <Link href="/portfolio/seragam-bordir-komunitas" className="group relative min-h-[23rem] overflow-hidden rounded-[1.75rem] bg-[#d8e1c6]">
+              <OptimizedImage src="/images/portfolio-seragam-cafe.webp" alt="Portfolio seragam bordir komunitas" className="absolute inset-0 h-full" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <h3 className="absolute bottom-5 left-5 text-3xl font-black leading-none">Seragam Cafe</h3>
+              <h3 className="absolute bottom-5 left-5 text-3xl font-black leading-none">Seragam Bordir</h3>
             </Link>
             <div className="grid gap-4">
-              <Link href="/portfolio/jersey-futsal-sekolah" className="group relative min-h-[11rem] overflow-hidden rounded-[1.75rem] bg-[#d8e1c6]">
-                <OptimizedImage src="/images/portfolio-jersey-futsal-sekolah.webp" alt="Portfolio jersey" className="absolute inset-0 h-full" />
+              <Link href="/portfolio/kaos-sablon-event" className="group relative min-h-[11rem] overflow-hidden rounded-[1.75rem] bg-[#d8e1c6]">
+                <OptimizedImage src="/images/portfolio-jersey-futsal-sekolah.webp" alt="Portfolio kaos sablon event" className="absolute inset-0 h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <h3 className="absolute bottom-4 left-4 text-2xl font-black leading-none">Jersey</h3>
+                <h3 className="absolute bottom-4 left-4 text-2xl font-black leading-none">Kaos Sablon</h3>
               </Link>
-              <Link href="/portfolio/hoodie-brand-lokal" className="group relative min-h-[11rem] overflow-hidden rounded-[1.75rem] bg-[#d8e1c6]">
-                <OptimizedImage src="/images/portfolio-hoodie-brand-lokal.webp" alt="Portfolio hoodie" className="absolute inset-0 h-full" />
+              <Link href="/portfolio/produksi-bordir-seragam" className="group relative min-h-[11rem] overflow-hidden rounded-[1.75rem] bg-[#d8e1c6]">
+                <OptimizedImage src="/images/portfolio-hoodie-brand-lokal.webp" alt="Portfolio produksi bordir seragam" className="absolute inset-0 h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <h3 className="absolute bottom-4 left-4 text-2xl font-black leading-none">Hoodie</h3>
+                <h3 className="absolute bottom-4 left-4 text-2xl font-black leading-none">Bordir</h3>
               </Link>
             </div>
           </div>
@@ -151,7 +104,7 @@ export default function HomePage() {
               Kirim desain dan kebutuhan produksi. Kami bantu pilih teknik yang paling masuk akal.
             </p>
             <a
-              href={createWhatsAppLink("Halo Lancar Clothing Sablon, saya mau cek harga sablon atau bordir custom.")}
+              href={createWhatsAppLink("Halo Lancar Konveksi Bordir & Sablon, saya mau cek harga sablon atau bordir custom.")}
               target="_blank"
               rel="noreferrer"
               className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#11140f] px-5 py-3 text-sm font-black text-white transition hover:bg-[#4f5d38]"
@@ -163,7 +116,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FAQSection items={globalFaqs.slice(0, 3)} title="Pertanyaan sebelum order" />
       <WhatsAppCTA
         title="Siap produksi custom?"
         description="Kirim desain, jumlah, bahan yang diinginkan, dan deadline. Kami bantu rekomendasikan teknik yang cocok."

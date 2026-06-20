@@ -15,28 +15,60 @@ import {
 } from "lucide-react";
 
 export const siteConfig = {
-  name: "Lancar Clothing Sablon",
-  legalName: "Lancar Clothing Sablon",
-  tagline: "Konveksi Sablon & Bordir Custom",
+  name: "Lancar Konveksi Bordir & Sablon",
+  legalName: "Lancar Konveksi Bordir Komputer dan Sablon",
+  tagline: "Konveksi, Bordir Komputer & Sablon Custom",
   baseUrl: "https://lancarclothingsablon.com",
-  phone: "+6281234567890",
-  whatsapp: "6281234567890",
+  phone: "0858-5689-6471",
+  whatsapp: "6285856896471",
   instagram: "@lancarclothing_sablon",
   instagramUrl: "https://www.instagram.com/lancarclothing_sablon/",
-  email: "hello@lancarclothingsablon.com",
-  address: {
-    street: "Indonesia",
-    city: "Indonesia",
-    region: "Indonesia",
-    country: "ID",
-    display: "Indonesia",
+  email: "order@lancarkonveksi.com",
+  googleMapsUrl:
+    "https://www.google.com/maps/place/Lancar+Konveksi+Bordir+Komputer+dan+Sablon/@-7.6215976,112.0961986,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7847002973ad85:0xca2fdac7fe5f5a97!8m2!3d-7.6215976!4d112.0961986!16s%2Fg%2F11x7wgpv3k",
+  googleCidUrl: "https://maps.google.com/?cid=14569103872067852951",
+  googleRating: {
+    value: 3.9,
+    count: 30,
   },
-  hours: "Senin-Sabtu, 08:00-17:00",
+  address: {
+    street: "Jalan Raya Juwono No.3, RT.02/RW.03, Sambijajar, Bangsri, Kec. Kertosono",
+    city: "Nganjuk",
+    region: "Jawa Timur",
+    country: "ID",
+    postalCode: "64315",
+    display:
+      "Jalan Raya Juwono No.3, RT.02/RW.03, Sambijajar, Bangsri, Kec. Kertosono, Kabupaten Nganjuk, Jawa Timur 64315",
+  },
+  hours: "Senin-Sabtu, 08.00-17.00 WIB",
   geo: {
-    latitude: -2.5489,
-    longitude: 118.0149,
+    latitude: -7.6215976,
+    longitude: 112.0961986,
   },
 };
+
+export const targetKeywords = [
+  "konveksi kertosono",
+  "konveksi nganjuk",
+  "jasa sablon kertosono",
+  "jasa sablon nganjuk",
+  "tempat bikin kaos kertosono",
+  "tempat bikin kaos nganjuk",
+  "kaos custom kertosono",
+  "kaos custom nganjuk",
+  "buat jersey kertosono",
+  "buat jersey nganjuk",
+  "hoodie custom kertosono",
+  "seragam kerja nganjuk",
+  "seragam komunitas kertosono",
+  "vendor merchandise nganjuk",
+  "sablon plastisol kertosono",
+  "sablon dtf kertosono",
+  "pesan kaos satuan kertosono",
+  "pesan kaos partai nganjuk",
+  "konveksi terdekat",
+  "tempat sablon terdekat",
+];
 
 export const navItems = [
   { href: "/", label: "Beranda" },
@@ -76,7 +108,7 @@ export const products: Product[] = [
     image: "/images/produk-kaos-sablon-custom.webp",
     description:
       "Kaos sablon custom untuk komunitas, perusahaan, sekolah, event, dan brand lokal.",
-    keywords: ["jasa sablon kaos", "kaos custom satuan", "konveksi kaos", "bordir kaos"],
+    keywords: ["jasa sablon kertosono", "kaos custom kertosono", "tempat bikin kaos nganjuk", "pesan kaos satuan kertosono"],
     relatedServices: ["jasa-sablon-kaos", "konveksi-kaos"],
   },
   {
@@ -86,10 +118,10 @@ export const products: Product[] = [
     priceRange: "Custom quotation",
     material: "Fleece / baby terry",
     minimumOrder: "Mulai 12 pcs",
-    image: "/images/produk-hoodie-custom.webp",
+    image: "/images/produk-hoodie-varsity.webp",
     description:
       "Hoodie custom dengan pilihan sablon DTF, plastisol, atau bordir untuk brand lokal, komunitas, dan merchandise.",
-    keywords: ["sablon hoodie", "hoodie custom", "sablon plastisol", "bordir hoodie"],
+    keywords: ["hoodie custom kertosono", "sablon hoodie", "sablon plastisol kertosono", "bordir hoodie"],
     relatedServices: ["sablon-hoodie", "jasa-sablon-kaos"],
   },
   {
@@ -102,7 +134,7 @@ export const products: Product[] = [
     image: "/images/produk-jersey-custom.webp",
     description:
       "Jersey custom untuk futsal, komunitas olahraga, sekolah, dan event dengan desain full color.",
-    keywords: ["jersey custom", "jersey printing", "sablon DTF"],
+    keywords: ["buat jersey kertosono", "buat jersey nganjuk", "jersey custom", "sablon DTF"],
     relatedServices: ["jersey-custom"],
   },
   {
@@ -115,7 +147,7 @@ export const products: Product[] = [
     image: "/images/produk-seragam-komunitas.webp",
     description:
       "Seragam komunitas, sekolah, cafe, kantor, dan organisasi dengan pilihan bordir atau sablon.",
-    keywords: ["konveksi seragam", "bordir seragam", "seragam custom"],
+    keywords: ["seragam kerja nganjuk", "seragam komunitas kertosono", "konveksi seragam", "bordir seragam"],
     relatedServices: ["konveksi-seragam"],
   },
   {
@@ -128,7 +160,7 @@ export const products: Product[] = [
     image: "/images/produk-merchandise-perusahaan.webp",
     description:
       "Paket merchandise perusahaan untuk event, onboarding karyawan, campaign, dan promosi brand.",
-    keywords: ["merchandise perusahaan", "vendor merchandise", "custom corporate merchandise"],
+    keywords: ["vendor merchandise nganjuk", "merchandise perusahaan", "custom corporate merchandise"],
     relatedServices: ["merchandise-perusahaan"],
   },
 ];
@@ -152,7 +184,7 @@ export const services: Service[] = [
   {
     slug: "jasa-sablon-kaos",
     title: "Jasa Sablon Kaos",
-    metaTitle: "Jasa Sablon Kaos | Lancar Clothing Sablon",
+    metaTitle: "Jasa Sablon Kaos Kertosono Nganjuk | Lancar Konveksi",
     metaDescription:
       "Layanan sablon dan bordir kaos custom untuk komunitas, perusahaan, sekolah, dan brand lokal. Bisa pesan satuan maupun partai.",
     h1: "Jasa Sablon Kaos",
@@ -179,7 +211,7 @@ export const services: Service[] = [
   {
     slug: "konveksi-kaos",
     title: "Konveksi Kaos & Bordir",
-    metaTitle: "Konveksi Kaos & Bordir | Produksi Kaos Custom Berkualitas",
+    metaTitle: "Konveksi Kaos Kertosono Nganjuk | Produksi Kaos Custom",
     metaDescription:
       "Produksi kaos custom berkualitas untuk brand lokal, sekolah, komunitas, dan perusahaan dengan bahan nyaman, sablon rapi, dan bordir presisi.",
     h1: "Konveksi Kaos & Bordir",
@@ -206,7 +238,7 @@ export const services: Service[] = [
   {
     slug: "sablon-hoodie",
     title: "Sablon Hoodie",
-    metaTitle: "Sablon Hoodie | Hoodie Custom untuk Brand dan Komunitas",
+    metaTitle: "Hoodie Custom Kertosono | Sablon dan Bordir Hoodie",
     metaDescription:
       "Jasa sablon hoodie custom dengan bahan fleece atau baby terry untuk brand lokal, komunitas, dan merchandise.",
     h1: "Sablon Hoodie",
@@ -233,7 +265,7 @@ export const services: Service[] = [
   {
     slug: "jersey-custom",
     title: "Jersey Custom",
-    metaTitle: "Jersey Custom | Pembuatan Jersey Printing dan Sablon",
+    metaTitle: "Buat Jersey Kertosono Nganjuk | Jersey Custom",
     metaDescription:
       "Pembuatan jersey custom untuk futsal, komunitas olahraga, sekolah, dan event dengan desain full color.",
     h1: "Jersey Custom",
@@ -260,7 +292,7 @@ export const services: Service[] = [
   {
     slug: "konveksi-seragam",
     title: "Konveksi Seragam",
-    metaTitle: "Konveksi Seragam | Seragam Komunitas, Sekolah, dan Perusahaan",
+    metaTitle: "Konveksi Seragam Nganjuk | Seragam Kerja dan Komunitas",
     metaDescription:
       "Konveksi seragam untuk komunitas, sekolah, cafe, kantor, dan organisasi dengan pilihan bordir atau sablon.",
     h1: "Konveksi Seragam",
@@ -287,7 +319,7 @@ export const services: Service[] = [
   {
     slug: "merchandise-perusahaan",
     title: "Merchandise Perusahaan",
-    metaTitle: "Merchandise Perusahaan | Custom Corporate Merchandise",
+    metaTitle: "Vendor Merchandise Nganjuk | Custom Corporate Merchandise",
     metaDescription:
       "Custom corporate merchandise untuk event, onboarding, promosi, dan campaign perusahaan. Bisa kaos, tote bag, topi, lanyard, dan gift set.",
     h1: "Merchandise Perusahaan",
@@ -330,90 +362,90 @@ export type PortfolioItem = {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    slug: "jersey-futsal-sekolah",
-    title: "Jersey Futsal Tim Sekolah",
-    clientType: "Sekolah",
-    quantity: "48 pcs",
-    material: "Dryfit premium",
-    printingMethod: "DTF printing",
+    slug: "kaos-sablon-event",
+    title: "Kaos Sablon Event",
+    clientType: "Event dan komunitas",
+    quantity: "Partai",
+    material: "Kaos cotton",
+    printingMethod: "Sablon",
     image: "/images/portfolio-jersey-futsal-sekolah.webp",
     gallery: [
       "/images/portfolio-jersey-futsal-sekolah-1.webp",
       "/images/portfolio-jersey-futsal-sekolah-2.webp",
     ],
-    excerpt: "Jersey futsal full custom untuk tim sekolah dengan nama, nomor, dan logo.",
+    excerpt: "Produksi kaos sablon partai dengan warna dan desain yang konsisten.",
     story:
-      "Project ini dibuat untuk kebutuhan turnamen sekolah. Fokus produksi ada pada warna tim yang konsisten, bahan ringan, dan detail nama nomor yang mudah dibaca.",
+      "Project ini berfokus pada hasil sablon yang rapi di setiap pcs, warna kaos yang seragam, dan finishing siap dibagikan untuk kebutuhan acara.",
     testimonial:
-      "Jersey nyaman dipakai latihan dan desainnya sesuai identitas sekolah. Proses konsultasinya juga cepat.",
-    relatedProducts: ["jersey-custom", "kaos-sablon-custom"],
+      "Hasil cetaknya rapi dan jumlah produksi sesuai kebutuhan acara. Komunikasi ordernya juga cepat.",
+    relatedProducts: ["kaos-sablon-custom", "merchandise-perusahaan"],
   },
   {
-    slug: "seragam-cafe",
-    title: "Seragam Cafe",
-    clientType: "F&B Business",
-    quantity: "36 pcs",
-    material: "Cotton drill",
-    printingMethod: "Bordir logo",
+    slug: "seragam-bordir-komunitas",
+    title: "Seragam Bordir Komunitas",
+    clientType: "Komunitas dan organisasi",
+    quantity: "Partai",
+    material: "Kain seragam",
+    printingMethod: "Bordir komputer",
     image: "/images/portfolio-seragam-cafe.webp",
     gallery: [
       "/images/portfolio-seragam-cafe-1.webp",
       "/images/portfolio-seragam-cafe-2.webp",
     ],
-    excerpt: "Seragam cafe dengan logo bordir untuk tim operasional dan frontliner.",
+    excerpt: "Seragam custom dengan bordir logo dan nama untuk identitas tim.",
     story:
-      "Seragam dibuat agar tim terlihat rapi saat melayani pelanggan. Logo diposisikan di dada kiri dengan bordir agar tahan cuci dan terlihat profesional.",
+      "Seragam dibuat agar identitas komunitas terlihat rapi. Bordir ditempatkan pada bagian dada dengan warna benang yang kontras dan mudah dibaca.",
     testimonial:
-      "Seragamnya rapi, bahan nyaman untuk shift panjang, dan logo cafe terlihat jelas.",
+      "Bordirnya rapi, detail nama terbaca jelas, dan hasil seragam terlihat kompak.",
     relatedProducts: ["seragam-komunitas"],
   },
   {
-    slug: "hoodie-brand-lokal",
-    title: "Hoodie Brand Lokal",
-    clientType: "Brand Lokal",
-    quantity: "72 pcs",
-    material: "Fleece",
-    printingMethod: "Plastisol",
+    slug: "produksi-bordir-seragam",
+    title: "Produksi Bordir Seragam",
+    clientType: "Corporate dan komunitas",
+    quantity: "Partai",
+    material: "Kemeja dan seragam",
+    printingMethod: "Bordir komputer",
     image: "/images/portfolio-hoodie-brand-lokal.webp",
     gallery: [
       "/images/portfolio-hoodie-brand-lokal-1.webp",
       "/images/portfolio-hoodie-brand-lokal-2.webp",
     ],
-    excerpt: "Hoodie custom untuk drop pertama brand lokal dengan tampilan streetwear.",
+    excerpt: "Proses bordir logo dan nama untuk produksi seragam custom.",
     story:
-      "Project hoodie dibuat untuk rilisan brand lokal. Fokusnya adalah print yang solid, placement desain presisi, dan finishing yang siap masuk katalog.",
+      "Project ini memperlihatkan proses produksi bordir dari file logo sampai hasil jadi. Fokusnya adalah placement, kerapian jahitan, dan warna benang yang sesuai identitas.",
     testimonial:
-      "Hasil print tebal dan clean. Cocok untuk drop brand lokal yang ingin tampil premium.",
-    relatedProducts: ["hoodie-custom"],
+      "Hasil bordir konsisten dan cocok untuk kebutuhan seragam yang terlihat profesional.",
+    relatedProducts: ["seragam-komunitas", "merchandise-perusahaan"],
   },
 ];
 
 export const testimonials = [
   {
-    name: "Raka Pratama",
-    role: "Owner Brand Lokal",
+    name: "Icha Icha",
+    role: "Ulasan Google",
     quote:
-      "Hasil sablon rapi dan konsultasinya jelas. Cocok untuk produksi kaos custom dan hoodie brand.",
+      "Pesan 1000 pcs kaos. Hasil bagus, sudah beberapa kali pesan hasil top.",
   },
   {
-    name: "Dina Ayu",
-    role: "Panitia Event",
+    name: "Dimas Ilham Akbar Firdaus",
+    role: "Ulasan Google",
     quote:
-      "Kaos event selesai sesuai kebutuhan. Tim bantu rekomendasi bahan dan teknik yang paling masuk budget.",
+      "Pengerjaan bagus, pelayanan juga ramah, hasilnya bagus, sangat rekomendasi.",
   },
   {
     name: "Arman Hidayat",
-    role: "Manager Operasional Cafe",
+    role: "Dummy customer",
     quote:
-      "Seragam cafe terlihat profesional. Bordir logo clean dan bahan nyaman dipakai shift panjang.",
+      "Seragam bordir terlihat profesional. Bahan nyaman dan hasil nama logo terbaca jelas.",
   },
 ];
 
 export const globalFaqs: FAQItem[] = [
   {
-    question: "Apakah Lancar Clothing Sablon menerima order luar kota?",
+    question: "Apakah Lancar Konveksi menerima order luar Kertosono dan Nganjuk?",
     answer:
-      "Ya. Konsultasi bisa lewat WhatsApp dan pengiriman dapat disesuaikan setelah produksi selesai.",
+      "Ya. Lokasi produksi ada di Kertosono, Nganjuk, dan konsultasi bisa lewat WhatsApp. Pengiriman dapat disesuaikan setelah produksi selesai.",
   },
   {
     question: "Apakah bisa order kaos custom satuan?",

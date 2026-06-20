@@ -8,6 +8,6 @@ export function createWhatsAppLink(message: string) {
 
 export function createProductOrderLink(productName: string) {
   return createWhatsAppLink(
-    `Halo Lancar Clothing, saya mau order ${productName}. Bisa info detail harga dan bahan?`,
+    `Halo Lancar Konveksi Bordir & Sablon, saya mau order ${productName}. Bisa info detail harga dan bahan?`,
   );
 }
