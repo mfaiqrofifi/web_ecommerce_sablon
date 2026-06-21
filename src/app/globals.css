@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #f4f6ee;
-  --foreground: #09090b;
+  --background: #fff8df;
+  --foreground: #130705;
+  --ink: #130705;
+  --paper: #fffdf7;
+  --sun: #ffc928;
+  --orange: #ff5a24;
+  --line: #eadfc7;
+  --muted: #77695b;
 }
 
 * {
@@ -18,19 +24,21 @@ html {
 body {
   color: var(--foreground);
   background:
-    radial-gradient(circle at top left, rgba(132, 151, 108, 0.18), transparent 30rem),
-    linear-gradient(180deg, #f7f8f2 0%, #f4f6ee 42%, #eef1e7 100%);
+    linear-gradient(90deg, rgba(19, 7, 5, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(19, 7, 5, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, #fff8df 0%, #fffdf7 42%, #fff4cf 100%);
+  background-size: 44px 44px, 44px 44px, auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 ::selection {
-  background: #111827;
+  background: var(--ink);
   color: #ffffff;
 }
 
 @layer components {
   .container-shell {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-[76rem] px-4 sm:px-6 lg:px-8;
   }
 
   .section-padding {
@@ -38,10 +46,14 @@ body {
   }
 
   .eyebrow {
-    @apply text-xs font-bold uppercase tracking-[0.22em] text-zinc-500;
+    @apply text-xs font-black uppercase tracking-[0.22em] text-[color:var(--orange)];
   }
 
   .focus-ring {
-    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ink)] focus-visible:ring-offset-2;
+  }
+
+  .editorial-card {
+    @apply border border-[color:var(--line)] bg-[color:var(--paper)] shadow-[8px_8px_0_0_var(--ink)];
   }
 }

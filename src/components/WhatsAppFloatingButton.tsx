@@ -8,7 +8,7 @@ export function WhatsAppFloatingButton() {
       target="_blank"
       rel="noreferrer"
       aria-label="Order via WhatsApp"
-      className="focus-ring fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#64734a] text-white shadow-2xl shadow-zinc-900/20 transition hover:scale-105 hover:bg-[#20251b]"
+      className="focus-ring fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--orange)] text-white shadow-[5px_5px_0_0_var(--ink)] transition hover:-translate-y-1 hover:bg-[color:var(--ink)]"
     >
       <MessageCircle size={25} />
     </a>

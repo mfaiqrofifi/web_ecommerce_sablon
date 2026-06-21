@@ -5,7 +5,7 @@ import { StructuredData } from "./StructuredData";
 
 export function FAQSection({ items, title }: { items: FAQItem[]; title?: string }) {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-[color:var(--paper)]">
       <StructuredData data={faqSchema(items)} />
       <div className="container-shell">
         <SectionHeader
@@ -16,9 +16,9 @@ export function FAQSection({ items, title }: { items: FAQItem[]; title?: string 
         />
         <div className="mx-auto mt-10 grid max-w-4xl gap-4">
           {items.map((item) => (
-            <article key={item.question} className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-black text-zinc-950">{item.question}</h3>
-              <p className="mt-3 text-sm leading-7 text-zinc-600">{item.answer}</p>
+            <article key={item.question} className="border border-[color:var(--line)] bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-black text-[color:var(--ink)]">{item.question}</h3>
+              <p className="mt-3 text-sm font-semibold leading-7 text-[color:var(--muted)]">{item.answer}</p>
             </article>
           ))}
         </div>

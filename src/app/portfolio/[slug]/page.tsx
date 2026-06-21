@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { MediaVisual } from "@/components/MediaVisual";
 import { OptimizedImage } from "@/components/OptimizedImage";
 import { ProductCard } from "@/components/ProductCard";
 import { StructuredData } from "@/components/StructuredData";
@@ -41,67 +42,85 @@ export default function PortfolioDetailPage({ params }: PageProps) {
       {schema ? <StructuredData data={schema} /> : null}
       <Breadcrumb items={[{ name: "Portfolio", href: "/portfolio" }, { name: item.title, href: `/portfolio/${item.slug}` }]} />
       <article>
-        <section className="bg-[#20251b] py-16 text-white sm:py-20">
-          <div className="container-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <div>
-              <p className="eyebrow text-[#c8d7ad]">{item.clientType}</p>
-              <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-6xl">{item.title}</h1>
-              <p className="mt-5 text-base leading-7 text-zinc-300">{item.excerpt}</p>
+        <section className="bg-[color:var(--sun)] px-0 py-4 sm:px-4 sm:py-6">
+          <div className="container-shell">
+            <div className="grid gap-0 border border-[color:var(--line)] bg-[color:var(--paper)] lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+              <div className="flex flex-col justify-center border-b border-[color:var(--line)] p-6 sm:p-10 lg:border-b-0 lg:border-r lg:p-12">
+                <p className="eyebrow">{item.clientType}</p>
+                <h1 className="mt-3 font-serif text-4xl font-black leading-none tracking-tight text-[color:var(--ink)] sm:text-6xl">
+                  {item.title}
+                </h1>
+                <p className="mt-5 text-base font-semibold leading-7 text-[color:var(--muted)]">{item.excerpt}</p>
+              </div>
+              <div className="p-4 sm:p-8">
+                <MediaVisual
+                  image={item.image}
+                  video={item.video}
+                  poster={item.poster}
+                  alt={item.title}
+                  priority
+                  className="h-[28rem] shadow-[10px_10px_0_0_var(--sun)]"
+                />
+              </div>
             </div>
-            <OptimizedImage src={item.image} alt={item.title} priority className="h-[28rem] rounded-[2rem]" />
           </div>
         </section>
-        <section className="section-padding bg-white">
+
+        <section className="section-padding bg-[color:var(--paper)]">
           <div className="container-shell grid gap-10 lg:grid-cols-[1fr_0.8fr]">
             <div>
-              <h2 className="text-3xl font-black tracking-tight text-zinc-950">Cerita project</h2>
-              <p className="mt-4 text-base leading-8 text-zinc-600">{item.story}</p>
-              <blockquote className="mt-8 rounded-[1.5rem] border-l-4 border-[#64734a] bg-[#eef3e3] p-6 text-lg font-bold leading-8 text-zinc-800">
-                “{item.testimonial}”
+              <h2 className="font-serif text-3xl font-black leading-none tracking-tight text-[color:var(--ink)]">Cerita project</h2>
+              <p className="mt-4 text-base font-semibold leading-8 text-[color:var(--muted)]">{item.story}</p>
+              <blockquote className="mt-8 border-l-4 border-[color:var(--orange)] bg-[#fff7db] p-6 text-lg font-black leading-8 text-[color:var(--ink)]">
+                &ldquo;{item.testimonial}&rdquo;
               </blockquote>
             </div>
-            <aside className="rounded-[1.5rem] border border-zinc-200 bg-zinc-50 p-6">
-              <h2 className="text-xl font-black">Detail produksi</h2>
+            <aside className="border border-[color:var(--line)] bg-white p-6 shadow-[7px_7px_0_0_var(--sun)]">
+              <h2 className="font-serif text-2xl font-black leading-none text-[color:var(--ink)]">Detail produksi</h2>
               <dl className="mt-5 grid gap-4 text-sm">
                 <div>
-                  <dt className="font-bold text-zinc-500">Client type</dt>
-                  <dd className="mt-1 font-black text-zinc-950">{item.clientType}</dd>
+                  <dt className="font-black text-[color:var(--orange)]">Client type</dt>
+                  <dd className="mt-1 font-black text-[color:var(--ink)]">{item.clientType}</dd>
                 </div>
                 <div>
-                  <dt className="font-bold text-zinc-500">Quantity ordered</dt>
-                  <dd className="mt-1 font-black text-zinc-950">{item.quantity}</dd>
+                  <dt className="font-black text-[color:var(--orange)]">Quantity ordered</dt>
+                  <dd className="mt-1 font-black text-[color:var(--ink)]">{item.quantity}</dd>
                 </div>
                 <div>
-                  <dt className="font-bold text-zinc-500">Material used</dt>
-                  <dd className="mt-1 font-black text-zinc-950">{item.material}</dd>
+                  <dt className="font-black text-[color:var(--orange)]">Material used</dt>
+                  <dd className="mt-1 font-black text-[color:var(--ink)]">{item.material}</dd>
                 </div>
                 <div>
-                  <dt className="font-bold text-zinc-500">Printing method</dt>
-                  <dd className="mt-1 font-black text-zinc-950">{item.printingMethod}</dd>
+                  <dt className="font-black text-[color:var(--orange)]">Printing method</dt>
+                  <dd className="mt-1 font-black text-[color:var(--ink)]">{item.printingMethod}</dd>
                 </div>
               </dl>
             </aside>
           </div>
         </section>
-        <section className="section-padding">
-          <div className="container-shell">
-            <h2 className="text-3xl font-black tracking-tight text-zinc-950">Project gallery</h2>
-            <div className="mt-8 grid gap-5 md:grid-cols-2">
-              {item.gallery.map((image, index) => (
-                <OptimizedImage
-                  key={image}
-                  src={image}
-                  alt={`${item.title} gallery ${index + 1}`}
-                  className="h-80 rounded-[1.5rem]"
-                />
-              ))}
+
+        {item.gallery.length ? (
+          <section className="section-padding bg-[color:var(--paper)]">
+            <div className="container-shell">
+              <h2 className="font-serif text-3xl font-black leading-none tracking-tight text-[color:var(--ink)]">Project gallery</h2>
+              <div className="mt-8 grid gap-5 md:grid-cols-2">
+                {item.gallery.map((image, index) => (
+                  <OptimizedImage
+                    key={image}
+                    src={image}
+                    alt={`${item.title} gallery ${index + 1}`}
+                    className="h-80 border border-[color:var(--line)]"
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ) : null}
       </article>
-      <section className="section-padding bg-white">
+
+      <section className="section-padding bg-[color:var(--paper)]">
         <div className="container-shell">
-          <h2 className="text-3xl font-black tracking-tight text-zinc-950">Produk terkait</h2>
+          <h2 className="font-serif text-3xl font-black leading-none tracking-tight text-[color:var(--ink)]">Produk terkait</h2>
           <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {relatedProducts.map((product) => (
               <ProductCard key={product.slug} product={product} />
@@ -113,6 +132,3 @@ export default function PortfolioDetailPage({ params }: PageProps) {
     </>
   );
 }
-
-
-

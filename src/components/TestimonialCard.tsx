@@ -8,17 +8,17 @@ type Testimonial = {
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <article className="rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm">
-      <Quote className="h-8 w-8 text-[#64734a]" />
-      <div className="mt-5 flex gap-1 text-[#b99058]">
+    <article className="border border-[color:var(--line)] bg-white p-6 shadow-sm">
+      <Quote className="h-8 w-8 text-[color:var(--orange)]" />
+      <div className="mt-5 flex gap-1 text-[color:var(--sun)]">
         {Array.from({ length: 5 }).map((_, index) => (
           <Star key={index} size={16} fill="currentColor" />
         ))}
       </div>
-      <p className="mt-4 text-sm leading-7 text-zinc-700">&ldquo;{testimonial.quote}&rdquo;</p>
-      <div className="mt-6 border-t border-zinc-100 pt-5">
-        <p className="font-black text-zinc-950">{testimonial.name}</p>
-        <p className="text-sm font-semibold text-zinc-500">{testimonial.role}</p>
+      <p className="mt-4 text-sm font-semibold leading-7 text-[color:var(--muted)]">&ldquo;{testimonial.quote}&rdquo;</p>
+      <div className="mt-6 border-t border-[color:var(--line)] pt-5">
+        <p className="font-black text-[color:var(--ink)]">{testimonial.name}</p>
+        <p className="text-sm font-semibold text-[color:var(--muted)]">{testimonial.role}</p>
       </div>
     </article>
   );

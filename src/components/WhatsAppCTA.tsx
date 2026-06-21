@@ -18,17 +18,17 @@ export function WhatsAppCTA({
   icon: Icon = PhoneCall,
 }: WhatsAppCTAProps) {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-[color:var(--paper)] py-12">
       <div className="container-shell">
-        <div className="rounded-[2rem] bg-[#20251b] p-6 text-white sm:p-10 lg:p-12">
+        <div className="border border-[color:var(--ink)] bg-[color:var(--ink)] p-6 text-white shadow-[10px_10px_0_0_var(--sun)] sm:p-10 lg:p-12">
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
             <div className="max-w-3xl">
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#64734a]">
+              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--orange)]">
                 <Icon size={26} aria-hidden />
               </div>
-              <h2 className="text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
-              <p className="mt-4 text-base leading-7 text-zinc-300">{description}</p>
-              <p className="mt-3 text-sm font-semibold text-zinc-400">
+              <h2 className="font-serif text-3xl font-black leading-none tracking-tight sm:text-5xl">{title}</h2>
+              <p className="mt-4 text-base font-semibold leading-7 text-white/72">{description}</p>
+              <p className="mt-3 text-sm font-semibold text-white/50">
                 {siteConfig.address.display} - {siteConfig.hours}
               </p>
             </div>
@@ -37,14 +37,14 @@ export function WhatsAppCTA({
                 href={createWhatsAppLink(message)}
                 target="_blank"
                 rel="noreferrer"
-                className="focus-ring inline-flex items-center justify-center gap-2 rounded-full bg-[#8a6a3d] px-6 py-4 text-sm font-black text-white transition hover:bg-[#6f5632]"
+                className="focus-ring inline-flex items-center justify-center gap-2 bg-[color:var(--orange)] px-6 py-4 text-sm font-black text-white shadow-[5px_5px_0_0_var(--sun)] transition hover:-translate-y-0.5"
               >
                 <MessageCircle size={19} aria-hidden />
                 Order via WhatsApp
               </a>
               <Link
                 href="/kontak"
-                className="focus-ring inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-4 text-sm font-black text-white transition hover:bg-white hover:text-zinc-950"
+                className="focus-ring inline-flex items-center justify-center border border-white/20 px-6 py-4 text-sm font-black text-white transition hover:bg-white hover:text-[color:var(--ink)]"
               >
                 Lihat kontak
               </Link>

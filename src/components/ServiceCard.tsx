@@ -12,24 +12,24 @@ type Service = {
 
 export function ServiceCard({ service }: { service: Service }) {
   return (
-    <article className="rounded-[1.5rem] border border-[#d9ddcc] bg-[#fbfaf4] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-zinc-900/10">
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#20251b] text-white">
+    <article className="border border-[color:var(--line)] bg-[color:var(--paper)] p-6 transition hover:-translate-y-1 hover:shadow-[8px_8px_0_0_var(--sun)]">
+      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--ink)] text-white">
         <service.icon size={26} />
       </div>
-      <h3 className="mt-6 text-2xl font-black tracking-tight text-zinc-950">
-        <Link href={`/layanan/${service.slug}`} className="hover:text-[#64734a]">
+      <h3 className="mt-6 font-serif text-3xl font-black leading-none tracking-tight text-[color:var(--ink)]">
+        <Link href={`/layanan/${service.slug}`} className="hover:text-[color:var(--orange)]">
           {service.title}
         </Link>
       </h3>
-      <p className="mt-3 text-sm leading-6 text-zinc-600">{service.description}</p>
+      <p className="mt-3 text-sm font-semibold leading-6 text-[color:var(--muted)]">{service.description}</p>
       <div className="mt-5 flex flex-wrap gap-2">
         {service.benefits.map((benefit) => (
-          <span key={benefit} className="rounded-full bg-[#eef3e3] px-3 py-1 text-xs font-bold text-[#4f5d38]">
+          <span key={benefit} className="rounded-full bg-[#fff2c2] px-3 py-1 text-xs font-black text-[color:var(--ink)]">
             {benefit}
           </span>
         ))}
       </div>
-      <p className="mt-5 rounded-2xl bg-[#f1f2e9] p-4 text-sm font-semibold leading-6 text-zinc-700">
+      <p className="mt-5 border border-[color:var(--line)] bg-[#fff7db] p-4 text-sm font-bold leading-6 text-[color:var(--muted)]">
         Cocok untuk: {service.useCase}
       </p>
     </article>

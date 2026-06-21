@@ -92,6 +92,8 @@ export type Product = {
   material: string;
   minimumOrder: string;
   image: string;
+  video?: string;
+  poster?: string;
   description: string;
   keywords: string[];
   relatedServices: string[];
@@ -105,7 +107,9 @@ export const products: Product[] = [
     priceRange: "Mulai Rp50.000/pcs",
     material: "Cotton combed 24s / 30s",
     minimumOrder: "Bisa satuan dan partai",
-    image: "/images/produk-kaos-sablon-custom.webp",
+    image: "/videos/kaos-sablon-dtf-poster.jpg",
+    video: "/videos/kaos-sablon-dtf.mp4",
+    poster: "/videos/kaos-sablon-dtf-poster.jpg",
     description:
       "Kaos sablon custom untuk komunitas, perusahaan, sekolah, event, dan brand lokal.",
     keywords: ["jasa sablon kertosono", "kaos custom kertosono", "tempat bikin kaos nganjuk", "pesan kaos satuan kertosono"],
@@ -144,7 +148,7 @@ export const products: Product[] = [
     priceRange: "Custom quotation",
     material: "Cotton, drill, lacoste",
     minimumOrder: "Mulai 24 pcs",
-    image: "/images/produk-seragam-komunitas.webp",
+    image: "/images/kemeja-workshirt-hitam.jpeg",
     description:
       "Seragam komunitas, sekolah, cafe, kantor, dan organisasi dengan pilihan bordir atau sablon.",
     keywords: ["seragam kerja nganjuk", "seragam komunitas kertosono", "konveksi seragam", "bordir seragam"],
@@ -157,7 +161,7 @@ export const products: Product[] = [
     priceRange: "Custom quotation",
     material: "Kaos, tote bag, topi, lanyard, dan gift set",
     minimumOrder: "Mulai 50 pcs",
-    image: "/images/produk-merchandise-perusahaan.webp",
+    image: "/images/kemeja-bordir-putih.jpeg",
     description:
       "Paket merchandise perusahaan untuk event, onboarding karyawan, campaign, dan promosi brand.",
     keywords: ["vendor merchandise nganjuk", "merchandise perusahaan", "custom corporate merchandise"],
@@ -353,6 +357,8 @@ export type PortfolioItem = {
   material: string;
   printingMethod: string;
   image: string;
+  video?: string;
+  poster?: string;
   gallery: string[];
   excerpt: string;
   story: string;
@@ -368,11 +374,10 @@ export const portfolioItems: PortfolioItem[] = [
     quantity: "Partai",
     material: "Kaos cotton",
     printingMethod: "Sablon",
-    image: "/images/portfolio-jersey-futsal-sekolah.webp",
-    gallery: [
-      "/images/portfolio-jersey-futsal-sekolah-1.webp",
-      "/images/portfolio-jersey-futsal-sekolah-2.webp",
-    ],
+    image: "/videos/kaos-sablon-dtf-poster.jpg",
+    video: "/videos/kaos-sablon-dtf.mp4",
+    poster: "/videos/kaos-sablon-dtf-poster.jpg",
+    gallery: [],
     excerpt: "Produksi kaos sablon partai dengan warna dan desain yang konsisten.",
     story:
       "Project ini berfokus pada hasil sablon yang rapi di setiap pcs, warna kaos yang seragam, dan finishing siap dibagikan untuk kebutuhan acara.",
@@ -387,10 +392,10 @@ export const portfolioItems: PortfolioItem[] = [
     quantity: "Partai",
     material: "Kain seragam",
     printingMethod: "Bordir komputer",
-    image: "/images/portfolio-seragam-cafe.webp",
+    image: "/images/kemeja-workshirt-hitam.jpeg",
     gallery: [
-      "/images/portfolio-seragam-cafe-1.webp",
-      "/images/portfolio-seragam-cafe-2.webp",
+      "/images/kemeja-workshirt-hitam.jpeg",
+      "/images/kemeja-bordir-putih.jpeg",
     ],
     excerpt: "Seragam custom dengan bordir logo dan nama untuk identitas tim.",
     story:
@@ -406,10 +411,10 @@ export const portfolioItems: PortfolioItem[] = [
     quantity: "Partai",
     material: "Kemeja dan seragam",
     printingMethod: "Bordir komputer",
-    image: "/images/portfolio-hoodie-brand-lokal.webp",
+    image: "/images/kemeja-bordir-putih.jpeg",
     gallery: [
-      "/images/portfolio-hoodie-brand-lokal-1.webp",
-      "/images/portfolio-hoodie-brand-lokal-2.webp",
+      "/images/kemeja-bordir-putih.jpeg",
+      "/images/kemeja-workshirt-hitam.jpeg",
     ],
     excerpt: "Proses bordir logo dan nama untuk produksi seragam custom.",
     story:

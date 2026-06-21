@@ -19,19 +19,20 @@ export default function LayananPage() {
   return (
     <>
       <Breadcrumb items={[{ name: "Layanan", href: "/layanan" }]} />
-      <section className="bg-[#20251b] py-16 text-white sm:py-20">
+      <section className="bg-[color:var(--sun)] px-0 py-4 sm:px-4 sm:py-6">
         <div className="container-shell">
-          <p className="eyebrow text-[#c8d7ad]">Layanan</p>
-          <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-            Jasa sablon, bordir, dan konveksi Kertosono
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
-            Pilih kebutuhan produksi untuk kaos, hoodie, jersey, seragam kerja, atau merchandise,
-            lalu konsultasikan desain, bahan, jumlah, dan deadline via WhatsApp.
-          </p>
+          <div className="border border-[color:var(--line)] bg-[color:var(--paper)] p-6 sm:p-10 lg:p-12">
+            <p className="eyebrow">Layanan</p>
+            <h1 className="mt-3 max-w-4xl font-serif text-4xl font-black leading-none tracking-tight text-[color:var(--ink)] sm:text-6xl">
+              Jasa sablon, bordir, dan konveksi Kertosono.
+            </h1>
+            <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-[color:var(--muted)]">
+              Pilih kebutuhan produksi untuk kaos, hoodie, jersey, seragam kerja, atau merchandise.
+            </p>
+          </div>
         </div>
       </section>
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[color:var(--paper)]">
         <div className="container-shell">
           <SectionHeader
             eyebrow="Layanan"

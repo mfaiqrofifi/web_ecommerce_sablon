@@ -18,18 +18,20 @@ export default function PortfolioPage() {
   return (
     <>
       <Breadcrumb items={[{ name: "Portfolio", href: "/portfolio" }]} />
-      <section className="bg-[#20251b] py-16 text-white sm:py-20">
+      <section className="bg-[color:var(--sun)] px-0 py-4 sm:px-4 sm:py-6">
         <div className="container-shell">
-          <p className="eyebrow text-[#c8d7ad]">Portfolio</p>
-          <h1 className="mt-3 max-w-4xl text-4xl font-black tracking-tight sm:text-6xl">
-            Portfolio sablon, bordir, dan konveksi
-          </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-300">
-            Contoh hasil produksi kaos sablon, seragam bordir, dan project custom sebagai referensi sebelum order.
-          </p>
+          <div className="border border-[color:var(--line)] bg-[color:var(--paper)] p-6 sm:p-10 lg:p-12">
+            <p className="eyebrow">Portfolio</p>
+            <h1 className="mt-3 max-w-4xl font-serif text-4xl font-black leading-none tracking-tight text-[color:var(--ink)] sm:text-6xl">
+              Hasil produksi sablon, bordir, dan konveksi.
+            </h1>
+            <p className="mt-5 max-w-2xl text-base font-semibold leading-7 text-[color:var(--muted)]">
+              Contoh visual untuk lihat karakter bahan, warna, dan finishing sebelum order.
+            </p>
+          </div>
         </div>
       </section>
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[color:var(--paper)]">
         <div className="container-shell">
           <SectionHeader eyebrow="Case studies" title="Project custom clothing pilihan" />
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
